@@ -34,6 +34,7 @@ const ContactForm = () => {
       const dataResponse = await response.json();
       console.log("Response from server:", dataResponse);
       setFormData({ name: '', email: '', subject: '', message: '' });
+      alert("sended message! Thank You!")
     } catch (error) {
       console.error('Error:', error);
       alert('Error sending message.');
