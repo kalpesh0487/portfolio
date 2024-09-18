@@ -37,7 +37,7 @@ const Projects = () => {
 
   return (
     <div className='text-white bg-black'>
-      <h2 className='py-16 flex items-center text-4xl text-white border-b border-white'>
+      <h2 className='pt-16 md:py-16 flex items-center text-4xl text-white border-b border-white'>
         <div className='masked font-semibold text-5xl md:text-8xl ml-10'>Projects</div>
       </h2>
       <nav>
