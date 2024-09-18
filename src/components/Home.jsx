@@ -13,7 +13,7 @@ const Home = () => {
   return (
     <div className="w-full h-screen">
       <div className='absolute flex flex-col items-center text-white top-1/4 left-1/2 -translate-x-1/2 font-["Helvetica_Now_Display"]'>
-      <h3 className='text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-[700] tracking-tighter text-center'>
+      <h3 className='masked text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-[700] tracking-tighter text-center'>
           Hello. I'm Kalpesh.
         </h3>
       </div>
