@@ -49,7 +49,7 @@ const Projects = () => {
                   className='link flex justify-between items-center cursor-pointer'
                   ref={(el) => (linksRef.current[index] = el)}
                 >
-                  <span className='ml-10'>{project.name}</span>
+                  <span className='ml-4 md:ml-10'>{project.name}</span>
                   <FaArrowRight className="text-3xl md:text-5xl ml-4 mr-10" />
                   <div
                     className='hover-reveal'
