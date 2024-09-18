@@ -16,7 +16,7 @@ const Projects = () => {
           hoverReveal.style.opacity = 1;
           hoverReveal.style.transform = `translate(-100%, -50%) rotate(3deg)`;
           linkImage.style.transform = 'scale(1,1)';
-          hoverReveal.style.left = e.clientX + 'px';
+          hoverReveal.style.left = e.clientX + "px";
         });
 
         link.addEventListener('mouseleave', () => {
@@ -36,26 +36,27 @@ const Projects = () => {
   ];
 
   return (
-    <div className='text-white bg-black px-4 sm:px-8'>
-      <h2 className='py-8 flex items-center text-4xl text-white border-b border-white'>
-        <div className='masked font-semibold text-5xl md:text-8xl ml-0 md:ml-10'>Projects</div>
+    <div className='text-white bg-black'>
+      <h2 className='py-16 flex items-center text-4xl text-white border-b border-white'>
+        <div className='masked font-semibold text-5xl md:text-8xl ml-10'>Projects</div>
       </h2>
       <nav>
         <ul>
           {projects.map((project, index) => (
-            <li key={index} className='relative mb-4'>
+            <li key={index}>
               <a href={project.link} target="_blank" rel="noopener noreferrer">
                 <div
-                  className='link flex justify-between items-center cursor-pointer p-2'
+                  className='link flex justify-between items-center cursor-pointer'
                   ref={(el) => (linksRef.current[index] = el)}
                 >
-                  <span className='ml-0 md:ml-4 text-lg md:text-xl'>{project.name}</span>
-                  <FaArrowRight className="text-2xl md:text-4xl ml-2 md:ml-4 mr-4" />
+                  <span className='ml-4 md:ml-10'>{project.name}</span>
+                  <FaArrowRight className="text-3xl md:text-5xl ml-4 mr-10" />
                   <div
-                    className='hover-reveal absolute'
+                    className='hover-reveal'
                     ref={(el) => (hoverRevealRef.current[index] = el)}
                     style={{
                       opacity: 0,
+                      position: 'absolute',
                       transition: 'all 0.3s ease',
                       transform: 'translate(-50%, -50%) rotate(0deg)',
                     }}
@@ -67,8 +68,8 @@ const Projects = () => {
                       style={{
                         transform: 'scale(0.8, 0.8)',
                         transition: 'transform 0.3s ease',
-                        width: '100%',
-                        height: 'auto',
+                        width: '100%', // Ensure images fill the container
+                        height: 'auto', // Maintain aspect ratio
                       }}
                     />
                   </div>
