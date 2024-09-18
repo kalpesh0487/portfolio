@@ -23,7 +23,7 @@ const ContactForm = () => {
     e.preventDefault();
     console.log("Reached here", formData);
     try {
-      const response = await fetch("http://localhost:3000/message", {
+      const response = await fetch(`https://my-portfolio-backend-sooty.vercel.app/message`, {
         method: "POST",
         body: JSON.stringify(formData),
         headers: {
