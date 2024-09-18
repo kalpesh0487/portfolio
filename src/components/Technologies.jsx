@@ -24,7 +24,7 @@ const Technologies = () => {
   return (
     <div className='pb-20 bg-black'>
         <div className=''>
-            <h2 className='pb-32 flex justify-center text-4xl text-white'>
+            <h2 className='py-32 flex justify-center text-4xl text-white'>
                 <div className='masked font-semibold text-4xl md:text-5xl '>Technologies</div>
             </h2>
             <div className='flex flex-wrap items-center justify-center gap-6'>
