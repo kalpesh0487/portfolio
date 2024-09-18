@@ -1,0 +1,136 @@
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+#root{
+    width: 100%;
+    height: 100%;
+    background-color: black;
+}
+
+.masked {
+    position: relative;
+    background: url("https://i.pinimg.com/564x/d9/54/87/d95487ffab31b9722b12eaf0e5709494.jpg") no-repeat center center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: cover;
+    line-height: 1.3;
+    padding-bottom: 0.2em;
+    margin-bottom: 10px;
+    overflow: visible;
+}
+
+.masked::before {
+    content: "macbook pro.";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://i.pinimg.com/564x/d9/54/87/d95487ffab31b9722b12eaf0e5709494.jpg") no-repeat center center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: cover;
+    filter: blur(40px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+.masked::after {
+    content: "macbook pro.";
+    position: absolute;
+    top: -5px;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("https://i.pinimg.com/564x/d9/54/87/d95487ffab31b9722b12eaf0e5709494.jpg") no-repeat center center;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    background-size: cover;
+    filter: blur(20px);
+    opacity: 0.8;
+    z-index: -1;
+}
+
+a, a:visited, a:hover {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+nav {
+    min-height: 100vh;
+    overflow: hidden;
+    display: grid;
+    place-items: center;
+}
+
+nav ul {
+    width: 100%;
+}
+
+nav ul li {
+    border-bottom: .05rem solid #fff;
+    position: relative;
+    z-index: 10;
+}
+
+nav ul li .link {
+    display: flex;
+    padding: 4rem 0 2rem 0;
+    z-index: 10;
+    justify-content: space-between;
+}
+
+nav ul li .link span {
+    display: block;
+    font-weight: 600;
+    z-index: 10;
+    mix-blend-mode: difference;
+    position: relative;
+    color: #fff;
+    font-size: 4rem;
+    text-transform: uppercase;
+}
+.hover-reveal {
+    position: absolute;
+    width: 300px; /* Adjust as needed */
+    height: 400px; /* Adjust as needed */
+    top: 50%;
+    left: 50%;
+    pointer-events: none;
+    transform: translate(-50%, -50%) scale(0.8); /* Combine transformations */
+    overflow: hidden;
+    opacity: 0;
+    transition: all .5s ease-out;
+}
+
+.hover-reveal img {
+    width: 100%; /* Ensure image fits container width */
+    height: 100%; /* Maintain aspect ratio */
+    object-fit: cover; /* Maintain aspect ratio and cover container */
+    position: relative;
+    transition: transform .4s ease-out;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        width: 93%;
+    }
+
+    nav ul li .link span {
+        font-size: 2.5rem;
+    }
+
+    .hover-reveal {
+        width: 220px;
+        height: 300px;
+    }
+}
