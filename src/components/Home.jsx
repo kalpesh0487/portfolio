@@ -12,9 +12,11 @@ function Loading() {
 const Home = () => {
   return (
     <div className="w-full h-screen">
-      <div className='absolute flex flex-col items-center text-white top-32 left-1/2 -translate-x-1/2 font-["Helvetica_Now_Display"]'>
-        <h3 className='text-3xl md:text-7xl masked tracking-tighter font-[700]'>Hello. I'm Kalpesh.</h3>
-      </div>  
+      <div className='absolute flex flex-col items-center text-white top-1/4 left-1/2 -translate-x-1/2 font-["Helvetica_Now_Display"]'>
+      <h3 className='text-2xl sm:text-3xl md:text-5xl lg:text-7xl font-[700] tracking-tighter text-center'>
+          Hello. I'm Kalpesh.
+        </h3>
+      </div>
       
       <Canvas camera={{ fov: 12, position: [0, -10, 120] }}>
         <Suspense fallback={<Loading />}>
@@ -28,7 +30,7 @@ const Home = () => {
             ]}
           />
           
-          <ScrollControls pages={3}>
+          <ScrollControls pages={2}>
             <MacContainer/>
           </ScrollControls>
         </Suspense>
