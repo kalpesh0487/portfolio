@@ -22,7 +22,7 @@ const MacContainer = () => {
         meshes.screen.rotation.x = THREE.MathUtils.degToRad(180 - (data.offset * 90));
     })
   return (
-    <group position={[0, -9, 20]} scale={[0.3, 0.3, 0.3]}>
+    <group position={[0, -9, 20]} scale={[0.45, 0.45, 0.45]}>
         <primitive object={model.scene}/>
     </group>
   )

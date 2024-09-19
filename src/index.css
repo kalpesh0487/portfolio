@@ -12,3 +12,22 @@
     display: none; /* Chrome, Safari, Opera */
   }
   
+  .glowing-loader {
+    animation: rotate3D 10s linear infinite;
+    transform-style: preserve-3d;
+    perspective: 1000px;
+    filter: drop-shadow(0 0 15px rgba(20, 4, 241, 0.99));
+  }
+  
+  @keyframes rotate3D {
+    0% {
+      transform: rotateX(0deg) rotateY(0deg) rotateZ(0deg);
+    }
+    100% {
+      transform: rotateX(360deg) rotateY(360deg) rotateZ(360deg);
+    }
+  }
+
+  
+  
+  
